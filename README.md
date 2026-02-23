@@ -14,6 +14,29 @@ The solution includes:
 * **Outlier Detection:** Implements Z-score analysis ($Z = \frac{x - \mu}{\sigma}$) to flag price anomalies where $|Z| > 3$.
 * **Enterprise Logging:** Uses Python's `logging` module for traceability instead of standard print statements.
 
+## Setup & Execution Instructions
+
+### Step 1: Install Dependencies
+Installs required packages.
+* **Windows:** `.\run.bat install`
+* **Mac/Linux:** `make install`
+
+### Step 2: Run the Interactive Web App
+Launches the Streamlit dashboard in your default browser.
+* **Windows:** `.\run.bat app`
+* **Mac/Linux:** `make run-app`
+
+### Step 3: Run the Backend Pipeline (CLI)
+Executes the ETL script locally without the UI and outputs a summary CSV.
+* **Windows:** `.\run.bat pipeline`
+* **Mac/Linux:** `make run-pipeline`
+
+### Step 4: Clean Environment
+Removes the generated CSV files and clears Python caches.
+* **Windows:** `.\run.bat clean`
+* **Mac/Linux:** `make clean`
+
+
 ## Project Structure
 ```text
 /Lord_Abbett_Case_Study
@@ -24,4 +47,5 @@ The solution includes:
 ├── positions.csv          # Input: Portfolio Holdings
 ├── prices.csv             # Input: Current Market Prices
 ├── prices_prev.csv        # Input: Historical Backup Prices
+
 └── README.md              # Project Documentation
